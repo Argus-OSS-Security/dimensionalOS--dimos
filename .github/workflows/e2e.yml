@@ -3,13 +3,14 @@ name: e2e
 # and too flaky for every PR, so they run once a day on main. Run them on a
 # branch with workflow_dispatch before merging a change to the cockpit, the
 # web SDK, DimSim or the e2e tests themselves.
-on:
-  schedule:
-    # 03:00 in San Francisco. GitHub cron is UTC only, so this is 03:00 PDT
-    # and 02:00 PST in winter.
-    - cron: '0 10 * * *'
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     # 03:00 in San Francisco. GitHub cron is UTC only, so this is 03:00 PDT
+#     # and 02:00 PST in winter.
+#     - cron: '0 10 * * *'
+#   workflow_dispatch:
+# 
 permissions: {}
 
 env:

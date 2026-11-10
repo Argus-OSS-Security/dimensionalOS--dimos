@@ -1,17 +1,18 @@
 name: Test installation script
 
-on:
-  pull_request:
-    paths:
-      - 'scripts/install.sh'
-      - 'scripts/test-install.sh'
-      - 'pyproject.toml'
-      - 'uv.lock'
-      - 'setup.py'
-      - 'MANIFEST.in'
-      - '.github/workflows/install.yml'
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - 'scripts/install.sh'
+#       - 'scripts/test-install.sh'
+#       - 'pyproject.toml'
+#       - 'uv.lock'
+#       - 'setup.py'
+#       - 'MANIFEST.in'
+#       - '.github/workflows/install.yml'
+#   workflow_dispatch:
+# 
 permissions:
   contents: read
 

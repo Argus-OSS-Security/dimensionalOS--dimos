@@ -1,5 +1,6 @@
 name: Dependabot auto-merge
-on: pull_request_target
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on: pull_request_target
 
 permissions:
   pull-requests: write

@@ -1,9 +1,10 @@
 name: backport
 
-on:
-  pull_request_target:
-    types: [closed, labeled]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [closed, labeled]
+# 
 permissions: {}
 
 jobs:

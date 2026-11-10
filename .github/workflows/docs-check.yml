@@ -1,18 +1,19 @@
 name: Check docs
 
-on:
-  pull_request:
-    paths:
-      - "docs/**"
-      - "mkdocs.yml"
-      - "misc/mkdocs/**"
-      - "README.md"
-      - "assets/readme/**"
-      - "pyproject.toml"
-      - "uv.lock"
-      - ".github/workflows/docs-check.yml"
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - "docs/**"
+#       - "mkdocs.yml"
+#       - "misc/mkdocs/**"
+#       - "README.md"
+#       - "assets/readme/**"
+#       - "pyproject.toml"
+#       - "uv.lock"
+#       - ".github/workflows/docs-check.yml"
+#   workflow_dispatch:
+# 
 permissions:
   contents: read
 

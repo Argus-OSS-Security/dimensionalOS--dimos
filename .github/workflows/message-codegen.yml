@@ -3,17 +3,18 @@ name: message-codegen
 # file under dimos/message_codegen/ against the published dimos-cdrgen library,
 # on Linux and macOS, in a clean virtualenv without the dimOS dev environment.
 
-on:
-  pull_request:
-    paths:
-      - dimos/message_codegen/**
-      - native/cpp/include/dimos/native/cdr_codec.hpp
-      - docs/development/message-source-packages.md
-      - pyproject.toml
-      - uv.lock
-      - .github/workflows/message-codegen.yml
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - dimos/message_codegen/**
+#       - native/cpp/include/dimos/native/cdr_codec.hpp
+#       - docs/development/message-source-packages.md
+#       - pyproject.toml
+#       - uv.lock
+#       - .github/workflows/message-codegen.yml
+#   workflow_dispatch:
+# 
 permissions:
   contents: read
 

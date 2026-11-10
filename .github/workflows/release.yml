@@ -3,17 +3,18 @@
 # rename by an attacker also disables them).
 name: release
 
-on:
-  workflow_dispatch:
-    inputs:
-      dry-run:
-        type: boolean
-        default: false
-        description: >-
-          Publish only to TestPyPI.
-          This is used to test the workflow itself, do NOT install dimos from TestPyPI.
-          TestPyPI is highly vulnerable to supply chain attacks.
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       dry-run:
+#         type: boolean
+#         default: false
+#         description: >-
+#           Publish only to TestPyPI.
+#           This is used to test the workflow itself, do NOT install dimos from TestPyPI.
+#           TestPyPI is highly vulnerable to supply chain attacks.
+# 
 concurrency:
   group: release-${{ github.ref }}
   cancel-in-progress: false  # Never cancel a release in flight

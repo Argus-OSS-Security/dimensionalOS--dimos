@@ -3,24 +3,25 @@
 # and the sdist at PR time so release-build breakage surfaces before release day.
 name: release-build-check
 
-on:
-  pull_request:
-    paths:
-      - .github/workflows/release.yml
-      - .github/workflows/release-build-check.yml
-      - .github/actions/build-cockpit/action.yml
-      - .github/scripts/check_sdist.py
-      - .github/scripts/wheel_smoke.py
-      - pyproject.toml
-      - setup.py
-      - MANIFEST.in
-      - web/cockpit/**
-      - web/sdk/**
-      - web/shared/**
-      - web/deno.json
-      - web/deno.lock
-      - dimos/utils/deno.py
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - .github/workflows/release.yml
+#       - .github/workflows/release-build-check.yml
+#       - .github/actions/build-cockpit/action.yml
+#       - .github/scripts/check_sdist.py
+#       - .github/scripts/wheel_smoke.py
+#       - pyproject.toml
+#       - setup.py
+#       - MANIFEST.in
+#       - web/cockpit/**
+#       - web/sdk/**
+#       - web/shared/**
+#       - web/deno.json
+#       - web/deno.lock
+#       - dimos/utils/deno.py
+# 
 permissions: {}
 
 jobs:

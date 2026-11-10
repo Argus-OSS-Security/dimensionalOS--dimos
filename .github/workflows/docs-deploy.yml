@@ -3,21 +3,22 @@ name: Deploy docs
 # The rendered site is served straight from the working tree of the pages
 # repo, so deploying is a build and a sync. bin/docs-deploy does exactly what
 # it does locally; this workflow only supplies the checkout and the key.
-on:
-  push:
-    branches: [main]
-    paths:
-      - "docs/**"
-      - "mkdocs.yml"
-      - "pyproject.toml"
-      - "uv.lock"
-      - "misc/mkdocs/**"
-      - "README.md"
-      - "assets/readme/**"
-      - "bin/docs-deploy"
-      - ".github/workflows/docs-deploy.yml"
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [main]
+#     paths:
+#       - "docs/**"
+#       - "mkdocs.yml"
+#       - "pyproject.toml"
+#       - "uv.lock"
+#       - "misc/mkdocs/**"
+#       - "README.md"
+#       - "assets/readme/**"
+#       - "bin/docs-deploy"
+#       - ".github/workflows/docs-deploy.yml"
+#   workflow_dispatch:
+# 
 permissions:
   contents: read
 

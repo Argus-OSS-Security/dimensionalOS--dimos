@@ -1,16 +1,17 @@
 name: dimsim-check
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - 'misc/DimSim/**'
-      - '.github/workflows/dimsim-check.yml'
-  pull_request:
-    paths:
-      - 'misc/DimSim/**'
-      - '.github/workflows/dimsim-check.yml'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [main]
+#     paths:
+#       - 'misc/DimSim/**'
+#       - '.github/workflows/dimsim-check.yml'
+#   pull_request:
+#     paths:
+#       - 'misc/DimSim/**'
+#       - '.github/workflows/dimsim-check.yml'
+# 
 permissions: {}
 
 jobs:

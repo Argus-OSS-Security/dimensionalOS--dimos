@@ -1,15 +1,16 @@
 name: docker-build
-on:
-  push:
-    branches: [main]
-    paths:
-      - 'docker/**'
-      - '.github/workflows/docker-build.yml'
-      - '.github/workflows/_docker-build-template.yml'
-  schedule:
-    - cron: '0 4 * * 1' # Weekly Monday 4am UTC for base image security patches
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [main]
+#     paths:
+#       - 'docker/**'
+#       - '.github/workflows/docker-build.yml'
+#       - '.github/workflows/_docker-build-template.yml'
+#   schedule:
+#     - cron: '0 4 * * 1' # Weekly Monday 4am UTC for base image security patches
+#   workflow_dispatch:
+# 
 permissions:
   contents: read
 
